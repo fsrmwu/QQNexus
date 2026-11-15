@@ -1,0 +1,38 @@
+{
+  "name": "qqnexus",
+  "version": "1.0.0",
+  "description": "SnowLuma + AstrBot 一体化启动器",
+  "main": "main.js",
+  "author": "浮生若梦",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --win dir",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.you.qqnexus",
+    "productName": "QQNexus",
+    "directories": { "output": "out" },
+    "files": ["main.js", "preload.js", "index.html", "icon.png"],
+    "asar": true,
+    "extraFiles": [
+      { "from": "app.ico", "to": "app.ico" },
+      { "from": "icon.png", "to": "icon.png" }
+    ],
+    "win": { "target": "dir", "icon": "app.ico" },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "installerIcon": "app.ico",
+      "uninstallerIcon": "app.ico"
+    }
+  }
+}

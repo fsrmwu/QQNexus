@@ -1,0 +1,38 @@
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 运行时产物
+python/
+astrbot/root/
+snowluma/
+logs/
+data/
+*.log
+*.pid
+
+# 凭据（绝不提交）
+credential.json
+*.token
+cmd_config.json
+*.db
+*.db-wal
+*.db-shm
+
+# 构建产物
+dist/
+out/
+release/
+stage/
+payload/
+cache/
+*.exe
+*.zip
+*.tar.gz
+
+# 系统
+.DS_Store
+Thumbs.db

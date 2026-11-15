@@ -60,7 +60,7 @@ Electron 主进程 (ui/main.js)
 ### 从源码构建
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/fsrmwu/QQNexus.git
 cd QQNexus/ui
 npm install
 npm start
